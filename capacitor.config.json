@@ -1,0 +1,10 @@
+{
+	"appId": "app.leadwaycloud.pos",
+	"appName": "capacitor-demo",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "http://192.168.31.5:8080",
+		"cleartext": true
+	}
+}
