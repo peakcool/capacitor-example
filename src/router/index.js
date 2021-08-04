@@ -2,6 +2,9 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 
 import HelloWorld from '../components/HelloWorld.vue';
 import Network from '../components/Network.vue';
+import Device from '../components/Device.vue';
+import BarcodeScanner from '../components/BarcodeScanner.vue';
+import StatusBar from '../components/StatusBar.vue';
 
 // 1. 定义路由组件.
 // 也可以从其他文件导入
@@ -12,6 +15,9 @@ import Network from '../components/Network.vue';
 const routes = [
   { path: '/', name: 'home', component: HelloWorld },
   { path: '/network', name: 'network', component: Network },
+  { path: '/device', name: 'device', component: Device },
+  { path: '/status-bar', name: 'status-bar', component: StatusBar },
+  { path: '/barcode-scanner', name: 'barcode-scanner', component: BarcodeScanner },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
