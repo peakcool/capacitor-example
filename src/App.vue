@@ -74,29 +74,31 @@
 						<q-item-label caption>@capacitor/status-bar</q-item-label>
 					</q-item-section>
 				</q-item>
+				<q-item
+					clickable
+					to="/status-bar"
+				>
+					<q-item-section avatar>
+						<q-icon name="folder" />
+					</q-item-section>
+					<q-item-section>
+						<q-item-label>SQLite</q-item-label>
+						<q-item-label caption>@capacitor-community/sqlite</q-item-label>
+					</q-item-section>
+				</q-item>
 			</q-list>
 		</q-drawer>
 
 		<q-page-container>
 			<router-view />
-			<!-- <HelloWorld /> -->
 		</q-page-container>
 	</q-layout>
 </template>
 
 <script>
 import { ref } from 'vue'
-// import HelloWorld from './components/HelloWorld.vue';
-// import Network from './components/Network.vue';
-
 export default {
 	name: 'LayoutDefault',
-
-	components: {
-		// HelloWorld,
-		// Network
-	},
-
 	setup() {
 		return {
 			leftDrawerOpen: ref(false)
