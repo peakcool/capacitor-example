@@ -3210,7 +3210,7 @@ core-js-compat@^3.14.0, core-js-compat@^3.16.0, core-js-compat@^3.6.5:
     browserslist "^4.16.6"
     semver "7.0.0"
 
-core-js@^3.6.5:
+core-js@^3.6.5, core-js@^3.8.3:
   version "3.16.0"
   resolved "https://registry.nlark.com/core-js/download/core-js-3.16.0.tgz#1d46fb33720bc1fa7f90d20431f36a5540858986"
   integrity sha1-HUb7M3ILwfp/kNIEMfNqVUCFiYY=
@@ -9528,6 +9528,14 @@ vue-router@^4.0.10:
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.14"
 
+vue-sqlite-hook@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.nlark.com/vue-sqlite-hook/download/vue-sqlite-hook-2.0.4.tgz#617de6a5204df1d12b5405ce6bef0d76cfa1c278"
+  integrity sha1-YX3mpSBN8dErVAXOa+8Nds+hwng=
+  dependencies:
+    core-js "^3.8.3"
+    vue next
+
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"
   resolved "https://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-4.1.3.tgz?cache=0&sync_timestamp=1614758661292&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-style-loader%2Fdownload%2Fvue-style-loader-4.1.3.tgz#6d55863a51fa757ab24e89d9371465072aa7bc35"
@@ -9541,7 +9549,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.nlark.com/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^3.0.0:
+vue@^3.0.0, vue@next:
   version "3.1.5"
   resolved "https://registry.nlark.com/vue/download/vue-3.1.5.tgz?cache=0&sync_timestamp=1627579383186&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue%2Fdownload%2Fvue-3.1.5.tgz#12879b11d0685ee4478c8869551799630a52f9fe"
   integrity sha1-EoebEdBoXuRHjIhpVReZYwpS+f4=

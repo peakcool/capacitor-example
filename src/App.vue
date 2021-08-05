@@ -76,7 +76,7 @@
 				</q-item>
 				<q-item
 					clickable
-					to="/status-bar"
+					to="/sqlite"
 				>
 					<q-item-section avatar>
 						<q-icon name="laptop_mac" />

@@ -16,7 +16,7 @@ export default defineComponent({
 	name: 'BarcodeScanner',
 	setup() {
 
-		let scanResult = ref<ScanResult>(null);
+		let scanResult = ref<ScanResult | null>(null);
 
 		const startScan = async () => {
 			BarcodeScanner.hideBackground(); // make background of WebView transparent

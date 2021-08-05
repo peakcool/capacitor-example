@@ -5,6 +5,7 @@ import Network from '../components/Network.vue';
 import Device from '../components/Device.vue';
 import BarcodeScanner from '../components/BarcodeScanner.vue';
 import StatusBar from '../components/StatusBar.vue';
+import SQLite from '../components/SQLite.vue';
 
 // 1. 定义路由组件.
 // 也可以从其他文件导入
@@ -18,6 +19,7 @@ const routes: any[] = [
   { path: '/device', name: 'device', component: Device },
   { path: '/status-bar', name: 'status-bar', component: StatusBar },
   { path: '/barcode-scanner', name: 'barcode-scanner', component: BarcodeScanner },
+  { path: '/sqlite', name: 'sqlite', component: SQLite },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置

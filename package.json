@@ -21,7 +21,8 @@
     "quasar": "^2.0.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
-    "vue-router": "^4.0.10"
+    "vue-router": "^4.0.10",
+    "vue-sqlite-hook": "^2.0.4"
   },
   "devDependencies": {
     "@capacitor/android": "^3.1.2",

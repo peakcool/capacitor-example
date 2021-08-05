@@ -24,13 +24,13 @@ export default defineComponent({
 	name: 'Device',
 	setup() {
 
-		let id = ref<DeviceId>(null);
+		let id = ref<DeviceId | null>(null);
 		const logDeviceId = async () => {
 			id.value = await Device.getId();
 			console.log('id info: ', id.value);
 		};
 
-		let device = ref<DeviceInfo>(null);
+		let device = ref<DeviceInfo | null>(null);
 		const logDeviceInfo = async () => {
 			device.value = await Device.getInfo();
 			console.log('device info: ', device.value);
@@ -42,7 +42,7 @@ export default defineComponent({
 			console.log('battery info: ', battery.value);
 		};
 
-		let languageCode = ref<GetLanguageCodeResult>(null);
+		let languageCode = ref<GetLanguageCodeResult | null>(null);
 		const logLanguageCode = async () => {
 			languageCode.value = await Device.getLanguageCode();
 			console.log('deviceLanguageCode info: ', languageCode.value);

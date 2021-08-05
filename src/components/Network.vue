@@ -20,7 +20,7 @@ export default defineComponent({
 	name: 'Network',
 	setup() {
 
-		let status = ref<ConnectionStatus>(null);
+		let status = ref<ConnectionStatus | null>(null);
 
 		Network.addListener('networkStatusChange', res => {
 			console.log('Network status changed', res);
