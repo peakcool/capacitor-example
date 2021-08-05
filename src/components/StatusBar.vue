@@ -11,9 +11,10 @@
 <style>
 </style>
 
-<script>
+<script lang="ts">
 import { StatusBar, Style } from '@capacitor/status-bar';
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
 	name: 'StatusBar',
 	setup() {
 
@@ -48,5 +49,5 @@ export default {
 			showStatusBar
 		}
 	}
-}
+})
 </script>

@@ -8,11 +8,9 @@
 	</q-page>
 </template>
 
-<style>
-</style>
-
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
 	name: 'HelloWorld'
-}
+})
 </script>

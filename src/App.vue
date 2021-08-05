@@ -79,7 +79,7 @@
 					to="/status-bar"
 				>
 					<q-item-section avatar>
-						<q-icon name="folder" />
+						<q-icon name="laptop_mac" />
 					</q-item-section>
 					<q-item-section>
 						<q-item-label>SQLite</q-item-label>
@@ -95,14 +95,14 @@
 	</q-layout>
 </template>
 
-<script>
-import { ref } from 'vue'
-export default {
-	name: 'LayoutDefault',
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
+export default defineComponent({
+	name: 'App',
 	setup() {
 		return {
 			leftDrawerOpen: ref(false)
 		}
 	}
-}
+})
 </script>

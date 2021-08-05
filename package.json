@@ -20,6 +20,7 @@
     "core-js": "^3.6.5",
     "quasar": "^2.0.0",
     "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
@@ -28,10 +29,14 @@
     "@capacitor/core": "^3.1.2",
     "@capacitor/geolocation": "^1.0.2",
     "@capacitor/ios": "^3.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-typescript": "^4.5.13",
     "@vue/cli-service": "~5.0.0",
     "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "autoprefixer": "^9",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
@@ -40,6 +45,7 @@
     "sass": "1.32.12",
     "sass-loader": "^10.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "~4.1.5",
     "vue-cli-plugin-quasar": "~4.0.1"
   },
   "eslintConfig": {
@@ -49,10 +55,11 @@
     },
     "extends": [
       "plugin:vue/vue3-essential",
-      "eslint:recommended"
+      "eslint:recommended",
+      "@vue/typescript"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@typescript-eslint/parser"
     },
     "rules": {}
   },

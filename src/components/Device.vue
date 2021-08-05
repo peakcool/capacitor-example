@@ -17,32 +17,32 @@
 <style>
 </style>
 
-<script>
-import { Device } from '@capacitor/device';
-import { ref } from 'vue';
-export default {
+<script lang="ts">
+import { Device, DeviceId, DeviceInfo, BatteryInfo, GetLanguageCodeResult } from '@capacitor/device';
+import { ref, defineComponent } from 'vue';
+export default defineComponent({
 	name: 'Device',
 	setup() {
 
-		let id = ref(null);
+		let id = ref<DeviceId>(null);
 		const logDeviceId = async () => {
 			id.value = await Device.getId();
 			console.log('id info: ', id.value);
 		};
 
-		let device = ref({});
+		let device = ref<DeviceInfo>(null);
 		const logDeviceInfo = async () => {
 			device.value = await Device.getInfo();
 			console.log('device info: ', device.value);
 		};
 
-		let battery = ref({});
+		let battery = ref<BatteryInfo>({});
 		const logBatteryInfo = async () => {
 			battery.value = await Device.getBatteryInfo();
 			console.log('battery info: ', battery.value);
 		};
 
-		let languageCode = ref(null);
+		let languageCode = ref<GetLanguageCodeResult>(null);
 		const logLanguageCode = async () => {
 			languageCode.value = await Device.getLanguageCode();
 			console.log('deviceLanguageCode info: ', languageCode.value);
@@ -60,5 +60,5 @@ export default {
 			languageCode
 		}
 	}
-}
+})
 </script>

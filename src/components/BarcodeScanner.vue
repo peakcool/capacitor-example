@@ -2,21 +2,21 @@
 	<q-page class="flex flex-center flex-col">
 		<q-btn color="primary" label="开启扫码" class="mb-4" @click="startScan"/>
 		<span class="text-h5 mb-2">扫码内容</span>
-		<span class="mb-4">{{ scanResult ? '暂无' : scanResult }}</span>
+		<span class="mb-4">{{ scanResult ? scanResult: '暂无' }}</span>
 	</q-page>
 </template>
 
 <style>
 </style>
 
-<script>
-import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
-import { ref } from 'vue';
-export default {
+<script lang="ts">
+import { BarcodeScanner, ScanResult } from '@capacitor-community/barcode-scanner';
+import { ref, defineComponent } from 'vue';
+export default defineComponent({
 	name: 'BarcodeScanner',
 	setup() {
 
-		let scanResult = ref({});
+		let scanResult = ref<ScanResult>(null);
 
 		const startScan = async () => {
 			BarcodeScanner.hideBackground(); // make background of WebView transparent
@@ -48,5 +48,5 @@ export default {
 	beforeUnmount() {
 		this.stopScan();
 	}
-}
+})
 </script>

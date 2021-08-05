@@ -2,8 +2,8 @@
 	<q-page class="flex flex-center flex-col">
 		<span>
 			<q-icon
-				:name="status.connected ? 'signal_wifi_4_bar' : 'signal_wifi_off'"
-				:class="status.connected ? 'text-green-400' : 'text-red-400'"
+				:name="status && status.connected ? 'signal_wifi_4_bar' : 'signal_wifi_off'"
+				:class="status && status.connected ? 'text-green-400' : 'text-red-400'"
 				class="text-6xl mb-4"/>
 		</span>
 		<span>{{ status }}</span>
@@ -13,14 +13,14 @@
 <style>
 </style>
 
-<script>
-import { Network } from '@capacitor/network';
-import { ref } from 'vue';
-export default {
+<script lang="ts">
+import { Network, ConnectionStatus } from '@capacitor/network';
+import { ref, defineComponent } from 'vue';
+export default defineComponent({
 	name: 'Network',
 	setup() {
 
-		let status = ref({});
+		let status = ref<ConnectionStatus>(null);
 
 		Network.addListener('networkStatusChange', res => {
 			console.log('Network status changed', res);
@@ -37,5 +37,5 @@ export default {
 			status
 		}
 	}
-}
+})
 </script>
